@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Veg | Asli Pak Punjab </title>
+
+    <!--My css-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="icon" href="" type="image/png">
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+
+</head>
+
+<body style="background-color: rgb(250, 246, 241);">
+
+    <!-- NavBar -->
+    <nav id="Navbar" class="navbar px-3 px-md-4 py-md-1">
+        <div class="website-name text-white">
+            <div class="logo-img">
+                <img src="assets/img/company-logo.png" alt="">
+            </div>
+
+            <h2 class="logo-style ps-3"> <span style="color: green;"> Asli </span> <span
+                    style="color: rgb(219, 187, 3);"> Pak </span> <span style="color: red;"> Punjab </span> </h2>
+        </div>
+
+        <div class="navbar-menu pe-5">
+            <ul class="navbar-menu-links text-white">
+                <a href="home.html">
+                    <li> Home </li>
+                </a>
+
+                <a href="#" class="dropdown-service">
+                    <li id="serviceToggle"> Our Menus </li>
+                </a>
+
+                <a href="about.html">
+                    <li> About US</li>
+                </a>
+
+                <a href="contact.html">
+                    <li> Contact Us </li>
+                </a>
+            </ul>
+
+            <div class="login-btn ms-4">
+                <a href="book-table.html"> <button> Make a Reservation </button> </a>
+            </div>
+        </div>
+
+        <div class="navbar-menu-toggle" onclick="shownavbar()">
+            <i class="bi bi-list"></i>
+        </div>
+    </nav>
+
+    <!--Side Navbar-->
+    <aside class="side-navbar">
+        <p class="cross-symbol" onclick="closenavbar()"> <i class="fa fa-times" aria-hidden="true"></i> </p>
+
+        <img src="assets/img/company-logo.png" alt="">
+
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"> <a href="home.html"> Home </a> </p>
+            <p class="side-navbar-link" onclick="toggleTopServiceDropdown()">
+                <a href="#" class="dropdown-service">
+                    <span id="serviceToggle"> Our Menus </span>
+                </a>
+            </p>
+            <p class="side-navbar-link"> <a href="about.html"> About </a> </p>
+            <p class="side-navbar-link"> <a href="contact.html"> Contact </a> </p>
+
+            <a href="book-table.html"> <button> Make a Reservation </button> </a>
+        </div>
+    </aside>
+
+    <!-- Service option-->
+    <div class="service-dropdown" id="serviceDropdown">
+        <div class="dropdown-title pb-2">
+            <h5> Select Your Menu </h5>
+        </div>
+
+        <a href="veg.html" class="service-item d-flex align-items-center">
+            <img src="assets/img/menu/veg-menu.jpg" alt="veg" class="flag-icon mx-2">
+            <span> Veg </span>
+        </a>
+
+        <a href="nonveg.html" class="service-item d-flex align-items-center">
+            <img src="assets/img/menu/non-veg-menu.jpg" alt="nonveg" class="flag-icon mx-2">
+            <span> Non-Veg </span>
+        </a>
+
+        <a href="juice.html" class="service-item d-flex align-items-center">
+            <img src="assets/img/menu/juice-menu.jpg" alt="juice" class="flag-icon mx-2">
+            <span> Juice </span>
+        </a>
+    </div>
+
+    <!--Sidebar service option-->
+    <div id="topServiceDropdown" class="top-service-dropdown">
+        <div class="dropdown-title pb-2">
+            <h5> Select Your Menu </h5>
+        </div>
+
+        <a href="veg.html" class="service-item d-flex align-items-center">
+            <img src="assets/img/menu/veg-menu.jpg" alt="veg" class="flag-icon mx-2">
+            <span> Veg </span>
+        </a>
+
+        <a href="nonveg.html" class="service-item d-flex align-items-center">
+            <img src="assets/img/menu/non-veg-menu.jpg" alt="nonveg" class="flag-icon mx-2">
+            <span> Non-Veg </span>
+        </a>
+
+        <a href="juice.html" class="service-item d-flex align-items-center">
+            <img src="assets/img/menu/juice-menu.jpg" alt="juice" class="flag-icon mx-2">
+            <span> Juice </span>
+        </a>
+    </div>
+
+    <!-- Menu Header-->
+    <section class="veg-menu-section">
+        <div class="menu-content">
+            <h4>OUR Menus</h4>
+            <h1> Vegetarian </h1>
+        </div>
+    </section>
+
+    <!-- Veg Menu Section -->
+    <section class=".menu-section px-2 px-md-5 py-5">
+
+        <div class="menu-list">
+            <div class="menu-title">
+                <img src="assets/img/menu/menu-title-img.png" alt="menu-img">
+                <h1> Special Vegetable </h1>
+            </div>
+
+            <div class="menu-item">
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/mix-vege-half.jpg" alt="Food Item 1">
+                        <div class="price-tag">RM 21.00</div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> SPl MIX VEGE HALF</div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/palak-paneer-half.jpg" alt="Food Item 1">
+                        <div class="price-tag"> RM 38.00 </div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> SPL PALAK PANEER HALF</div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/dal-mash-makhani-half.jpg" alt="Food Item 1">
+                        <div class="price-tag"> RM 19.00 </div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> DAL MASH MAKHANI HALF </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/panner-masala-half.jpg" alt="Food Item 1">
+                        <div class="price-tag"> RM 40.00 </div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> PANNER MASALA HALF </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/matar-paneer-half.jpg" alt="Food Item 1">
+                        <div class="price-tag">RM 38.00</div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> MATAR PANEER HALF</div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/bhendi-masala-half.jpg" alt="Food Item 1">
+                        <div class="price-tag">RM 21.00</div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> BHENDI MASALA HALF </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/aloo-gobi-masala.jpg" alt="Food Item 1">
+                        <div class="price-tag"> RM 15.00 </div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> ALOO GOBI MASALA </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/dal-tadka.jpg" alt="Food Item 1">
+                        <div class="price-tag"> RM 15.00 </div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> DAL TADKA </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/aloo-achari-masala.jpg" alt="Food Item 1">
+                        <div class="price-tag"> RM 15.00 </div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> ALOO ACHARI MASALA </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/saag-makhani.jpg" alt="Food Item 1">
+                        <div class="price-tag">RM 20.00</div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> SAAG MAKHANI </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-list">
+            <div class="menu-title">
+                <img src="assets/img/menu/menu-title-img.png" alt="menu-img">
+                <h1> PARATHA </h1>
+            </div>
+
+            <div class="menu-item">
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/cheese-paratha.jpg" alt="Food Item 1">
+                        <div class="price-tag">RM 9.00</div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> CHEESE PARATHA </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/tandoori-paratha.jpg" alt="Food Item 1">
+                        <div class="price-tag"> RM 4.00 </div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> TANDOORI PARATHA </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/plain-paratha.jpg" alt="Food Item 1">
+                        <div class="price-tag"> RM 3.50 </div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> PLAIN PARATHA </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/onion-paratha.jpg" alt="Food Item 1">
+                        <div class="price-tag"> RM 5.00 </div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> ONION PARATHA </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/cheese-paratha.jpg" alt="Food Item 1">
+                        <div class="price-tag">RM 14.00</div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> SPL CHEESE PARATHA </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/garlic-paratha.jpg" alt="Food Item 1">
+                        <div class="price-tag">RM 6.00</div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> GARLIC PARATHA </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/aloo-cheese-paratha.jpg" alt="Food Item 1">
+                        <div class="price-tag"> RM 12.00 </div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> ALOO CHEESE PARATHA </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/chilli-cheese-paratha.jpg" alt="Food Item 1">
+                        <div class="price-tag"> RM 12.00 </div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> CHILLI CHEESE PARATHA </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/gobi-paratha.jpg" alt="Food Item 1">
+                        <div class="price-tag"> RM 8.00 </div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> GOBI PARATHA </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/beef-keema-paratha.jpg" alt="Food Item 1">
+                        <div class="price-tag">RM 14.00</div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> BEEF KEEMA PARATHA </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-list">
+            <div class="menu-title">
+                <img src="assets/img/menu/menu-title-img.png" alt="menu-img">
+                <h1> NAAN - ROTI </h1>
+            </div>
+
+            <div class="menu-item">
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/cheese-naan.jpg" alt="Food Item 1">
+                        <div class="price-tag">RM 9.00</div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> CHEESE NAAN </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/roghani-naan.jpg" alt="Food Item 1">
+                        <div class="price-tag"> RM 3.50 </div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> ROGHANI NAAN </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/tandoori-roti.jpg" alt="Food Item 1">
+                        <div class="price-tag"> RM 2.50 </div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> TANDOORI ROTI </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/keema-naan.jpg" alt="Food Item 1">
+                        <div class="price-tag"> RM 15.00 </div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> KEEMA NAAN </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/kashmiri-cheese-naan.jpg" alt="Food Item 1">
+                        <div class="price-tag">RM 14.00</div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> SPL KASHMIRI CHEESE NAAN </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/double-cheese-naan.jpg" alt="Food Item 1">
+                        <div class="price-tag">RM 14.00</div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> SPL DOUBLE CHEESE NAAN </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/chicken-cheese-naan.jpg" alt="Food Item 1">
+                        <div class="price-tag"> RM 17.00 </div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> CHICKEN CHEESE NAAN </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/aloo-cheese-naan.jpg" alt="Food Item 1">
+                        <div class="price-tag"> RM 14.00 </div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> ALOO CHEESE NAAN </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/aloo-naan.jpg" alt="Food Item 1">
+                        <div class="price-tag"> RM 7.00 </div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> ALOO NAAN </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/garalic-cheese-naan.jpg" alt="Food Item 1">
+                        <div class="price-tag">RM 11.00</div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> GARLIC CHEESE NAAN </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/chilli-cheese-naan.jpg" alt="Food Item 1">
+                        <div class="price-tag">RM 11.00</div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> CHILLI CHEESE NAAN </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/chicken-keema-naan.jpg" alt="Food Item 1">
+                        <div class="price-tag"> RM 13.00 </div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> CHICKEN KEEMA NAAN </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/chicken-keema-naan.jpg" alt="Food Item 1">
+                        <div class="price-tag"> RM 13.00 </div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> CHICKEN KEEMA NAAN </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/plain-naan.jpg" alt="Food Item 1">
+                        <div class="price-tag">RM 3.00</div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> PLAIN NAAN </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/chapati.jpg" alt="Food Item 1">
+                        <div class="price-tag">RM 2.50</div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> CHAPATI </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-list">
+            <div class="menu-title">
+                <img src="assets/img/menu/menu-title-img.png" alt="menu-img">
+                <h1> SALAD RAITA SAUCE </h1>
+            </div>
+
+            <div class="menu-item">
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/fruit-salad.jpg" alt="Food Item 1">
+                        <div class="price-tag">RM 30.00</div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> FRUIT SALAD </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/russian-salad.jpg" alt="Food Item 1">
+                        <div class="price-tag"> RM 30.00 </div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> RUSSIAN SALAD </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/fresh-green-ring-salad.jpg" alt="Food Item 1">
+                        <div class="price-tag"> RM 5.00 </div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> FRESH GREEN RING SALAD </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/freash-kachumber-salad.jpg" alt="Food Item 1">
+                        <div class="price-tag"> RM 8.00 </div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> FREAH KACHUMBER SALAD </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/mint-raita-sauce.jpg" alt="Food Item 1">
+                        <div class="price-tag">RM 6.00</div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> MINT RAITA SAUCE </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="menu-list">
+            <div class="menu-title">
+                <img src="assets/img/menu/menu-title-img.png" alt="menu-img">
+                <h1> DESERTS </h1>
+            </div>
+
+            <div class="menu-item">
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/resmalai.jpg" alt="Food Item 1">
+                        <div class="price-tag">RM 7.00</div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> SPL RAS MALAI </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/kheer.jpg" alt="Food Item 1">
+                        <div class="price-tag"> RM 6.00 </div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> KHEER </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/ras-gulla.jpg" alt="Food Item 1">
+                        <div class="price-tag"> RM 2.50 </div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> RAS GULLA </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/gulub-jamun.jpg" alt="Food Item 1">
+                        <div class="price-tag"> RM 2.00 </div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> GULUB JAMUN </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image-container">
+                        <img src="assets/img/veg-img/mix-sweet.jpg" alt="Food Item 1">
+                        <div class="price-tag">RM 55.00</div>
+                    </div>
+
+                    <div class="food-details">
+                        <div class="food-name"> SPL MIX SWEET  </div>
+                        <button class="add-cart-btn"> Add + </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Newsletter Section -->
+    <div class="container pt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 newsletter-section">
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center" style="border-radius: 10px;">
+                        <img src="assets/img/home-header-img/2.jpg" alt="Food Image" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-8">
+                        <p class="mb-1"
+                            style="color: gold; font-size: 20px;font-weight: 700;text-shadow: 0.5px 0.5px 1px #000;">
+                            Aslipakpunjab</p>
+                        <h3>GET OUR EVERY SINGLE MENU NOTIFICATIONS</h3>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="updateFrequency" id="regularUpdates"
+                                checked>
+                            <label class="form-check-label" for="regularUpdates">Regular Updates</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="updateFrequency" id="weeklyUpdates">
+                            <label class="form-check-label" for="weeklyUpdates">Weekly Updates</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="updateFrequency" id="monthlyUpdates">
+                            <label class="form-check-label" for="monthlyUpdates">Monthly Updates</label>
+                        </div>
+                        <div class="input-group mt-3">
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                            <button class="btn btn-warning" type="button"><i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Company Info -->
+                <div class="col-md-3">
+                    <h2> <span style="color: green;"> Asli </span> <span style="color: gold;"> Pak </span> <span
+                            style="color: red;"> Punjab </span> </h2>
+                    <p>
+                        Experience the true taste of Punjab with every bite at Asli Pak Punjab. From sizzling
+                        tandoori
+                        delights to rich, flavorful curries, our dishes are crafted using traditional recipes and
+                        handpicked spices. Come for the food, stay for the warmth.
+                    </p>
+
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+                <!-- Our Menus -->
+                <div class="col-md-3">
+                    <h5>OUR MENUS</h5>
+                    <ul>
+                        <li><a href="#">Chicken Burger</a></li>
+                        <li><a href="#">Brief Pizza</a></li>
+                        <li><a href="#">Fresh Vegetable</a></li>
+                        <li><a href="#">Sea Foods</a></li>
+                        <li><a href="#">Desserts</a></li>
+                        <li><a href="#">Cold Drinks</a></li>
+                        <li><a href="#">Discount</a></li>
+                    </ul>
+                </div>
+                <!-- Useful Links -->
+                <div class="col-md-3">
+                    <h5>USEFUL LINKS</h5>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Restaurant</a></li>
+                        <li><a href="#">Our Chefs</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Blogs</a></li>
+                        <li><a href="#">FAQS</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Us & Download App -->
+                <div class="col-md-3">
+                    <h5>CONTACT US</h5>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> 0192891193 </li>
+                        <li><i class="fas fa-phone"></i> 0192891193 </li>
+                        <li><i class="fas fa-envelope"></i> <a
+                                href="mailto:info@yourdomain.com">admin@aslipakpunjab.com</a>
+                        </li>
+                        <li><i class="bi bi-globe"></i> www.aslipakpunjab.com </li>
+                        <li><i class="fas fa-map-marker-alt"></i> 15, JALAN SIP 1, SURIA INDUSTRIAL PARK, 43900 SEPANG,
+                            SELANGOR </li>
+                    </ul>
+                    <h5 class="mt-4">DOWNLOAD APP</h5>
+                    <div class="app-download">
+                        <a href="#"><img src="assets/img/store/google-play-logo.png" alt="Google Play"></a><br>
+                        <a href="#"><img src="assets/img/store/app-store-logo.png" alt="App Store"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom py-3">
+        <p class="bottom-content">© 2025. ALL RIGHTS RESERVED</p>
+
+        <div>
+            <span>ACCEPT FOR</span>
+            <img src="assets/img/payment-method/pay1.png" alt="Paypal" class="mt-2 mt-md-0"
+                style="background-color: #fff;">
+            <img src="assets/img/payment-method/pay2.png" alt="Mastercard" class="mt-2 mt-md-0"
+                style="background-color: #fff;">
+            <img src="assets/img/payment-method/pay3.png" alt="Visa" class="mt-2 mt-md-0"
+                style="background-color: #fff;">
+            <img src="assets/img/payment-method/pay4.png" alt="Discover" class="mt-2 mt-md-0"
+                style="background-color: #fff;">
+            <img src="assets/img/payment-method/pay5.png" alt="Amex" class="mt-2 mt-md-0"
+                style="background-color: #fff;">
+        </div>
+
+        <!-- Back to Top Button -->
+        <button class="back-to-top" onclick="scrollToTop()">
+            ↑
+        </button>
+    </div>
+
+    <script src="assets/js/script.js"> </script>
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"> </script>
+</body>
+
+</html>

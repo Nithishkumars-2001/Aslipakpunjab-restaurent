@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Non Veg | Asli Pak Punjab </title>
+
+    <!--My css-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="icon" href="" type="image/png">
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+
+</head>
+
+<body style="background-color: rgb(250, 246, 241);">
+
+    <!-- NavBar -->
+    <nav id="Navbar" class="navbar px-3 px-md-4 py-md-1">
+        <div class="website-name text-white">
+            <div class="logo-img">
+                <img src="assets/img/company-logo.png" alt="">
+            </div>
+
+            <h2 class="logo-style ps-3"> <span style="color: green;"> Asli </span> <span
+                    style="color: rgb(219, 187, 3);"> Pak </span> <span style="color: red;"> Punjab </span> </h2>
+        </div>
+
+        <div class="navbar-menu pe-5">
+            <ul class="navbar-menu-links text-white">
+                <a href="home.html">
+                    <li> Home </li>
+                </a>
+
+                <a href="#" class="dropdown-service">
+                    <li id="serviceToggle"> Our Menus </li>
+                </a>
+
+                <a href="about.html">
+                    <li> About US</li>
+                </a>
+
+                <a href="contact.html">
+                    <li> Contact Us </li>
+                </a>
+            </ul>
+
+            <div class="login-btn ms-4">
+                <a href="book-table.html"> <button> Make a Reservation </button> </a>
+            </div>
+        </div>
+
+        <div class="navbar-menu-toggle" onclick="shownavbar()">
+            <i class="bi bi-list"></i>
+        </div>
+    </nav>
+
+    <!--Side Navbar-->
+    <aside class="side-navbar">
+        <p class="cross-symbol" onclick="closenavbar()"> <i class="fa fa-times" aria-hidden="true"></i> </p>
+
+        <img src="assets/img/company-logo.png" alt="">
+
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"> <a href="home.html"> Home </a> </p>
+            <p class="side-navbar-link" onclick="toggleTopServiceDropdown()">
+                <a href="#" class="dropdown-service">
+                    <span id="serviceToggle"> Our Menus </span>
+                </a>
+            </p>
+            <p class="side-navbar-link"> <a href="about.html"> About </a> </p>
+            <p class="side-navbar-link"> <a href="contact.html"> Contact </a> </p>
+
+            <a href="book-table.html"> <button> Make a Reservation </button> </a>
+        </div>
+    </aside>
+
+    <!-- Service option-->
+    <div class="service-dropdown" id="serviceDropdown">
+        <div class="dropdown-title pb-2">
+            <h5> Select Your Menu </h5>
+        </div>
+
+        <a href="veg.html" class="service-item d-flex align-items-center">
+            <img src="assets/img/menu/veg-menu.jpg" alt="veg" class="flag-icon mx-2">
+            <span> Veg </span>
+        </a>
+
+        <a href="nonveg.html" class="service-item d-flex align-items-center">
+            <img src="assets/img/menu/non-veg-menu.jpg" alt="nonveg" class="flag-icon mx-2">
+            <span> Non-Veg </span>
+        </a>
+
+        <a href="juice.html" class="service-item d-flex align-items-center">
+            <img src="assets/img/menu/juice-menu.jpg" alt="juice" class="flag-icon mx-2">
+            <span> Juice </span>
+        </a>
+    </div>
+
+    <!--Sidebar service option-->
+    <div id="topServiceDropdown" class="top-service-dropdown">
+        <div class="dropdown-title pb-2">
+            <h5> Select Your Menu </h5>
+        </div>
+
+        <a href="veg.html" class="service-item d-flex align-items-center">
+            <img src="assets/img/menu/veg-menu.jpg" alt="veg" class="flag-icon mx-2">
+            <span> Veg </span>
+        </a>
+
+        <a href="nonveg.html" class="service-item d-flex align-items-center">
+            <img src="assets/img/menu/non-veg-menu.jpg" alt="nonveg" class="flag-icon mx-2">
+            <span> Non-Veg </span>
+        </a>
+
+        <a href="juice.html" class="service-item d-flex align-items-center">
+            <img src="assets/img/menu/juice-menu.jpg" alt="juice" class="flag-icon mx-2">
+            <span> Juice </span>
+        </a>
+    </div>
+
+    <!-- Menu Header-->
+    <section class="menu-section">
+        <div class="menu-content">
+            <h4>OUR Menus</h4>
+            <h1> Non-vegetarian </h1>
+        </div>
+    </section>
+
+    <main class="nonveg-main-conent">
+
+        <!-- Non-Veg Menu Section -->
+        <section class=".menu-section px-2 px-md-5 py-5">
+
+            <div class="menu-list">
+                <div class="menu-title">
+                    <img src="assets/img/menu/menu-title-img.png" alt="menu-img">
+                    <h1> STARTER </h1>
+                </div>
+
+                <div class="menu-item">
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/lahori-fried-fish.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 38.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Lahori Fried Fish </div>
+                            <div class="food-desc"> Filled of Boneless Fish Marinated SPL Recipe & Fried </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/fried-chicken.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 25.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Special Fried Chicken</div>
+                            <div class="food-desc"> Chicken Marinated in Our SPL Cheif Recipe</div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/aloo-chana-chaat.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 15.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Aloo Chana Chaat </div>
+                            <div class="food-desc"> Boiled Potato's Chickpee & Mix With Spl Masala</div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/dahi-bhalliyan.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 18.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Dahi Bhalliyan </div>
+                            <div class="food-desc">Soft lentil dumplings in yogurt with tamarind chutney.</div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/samosa-with-chatni.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 6.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> SPL Samosa With Chatni </div>
+                            <div class="food-desc">Crispy samosa served with spicy and mint chutney.</div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-list">
+
+                <div class="menu-title">
+                    <img src="assets/img/menu/menu-title-img.png" alt="menu-img">
+                    <h1> SPECIAL BREAKFAST </h1>
+                </div>
+
+                <div class="menu-item">
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/mutton-paya.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 25.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Lamb Paya / Mutton Paya </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/beef-paya.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 25.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Beef Paya / Beef Feet </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/halwa-puri-set.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 12.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Halwa Puri Set </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/aloo-paratha.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 7.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Aloo Paratha</div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/beef-nihari.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 20.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Beef Nihari </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/saag-makhani.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 20.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Saag Makhani </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/plain-paratha.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 3.50</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Plain Paratha </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/fresh-yougurt.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 16.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Fresh Yougurt(Dahi) </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-list">
+
+                <div class="menu-title">
+                    <img src="assets/img/menu/menu-title-img.png" alt="menu-img">
+                    <h1> PAK PUNJAB SPECIAL HANDI </h1>
+                </div>
+
+                <div class="menu-item">
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/mutton-handi.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 90.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Mutton Handi </div>
+                            <div class="food-desc"> Special Recipe of Chief 1/2Kg RM 45.00 / 1Kg RM 90.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/mutton-badami-handi.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 88.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Mutton Badami Handi </div>
+                            <div class="food-desc"> Boneless Mutton Cooked in Alomond & Mughlai Style 1/2Kg RM 45.00 /
+                                1Kg
+                                RM 88.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/mutton-bone-less-handi.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 88.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Mutton Bone Less Handi </div>
+                            <div class="food-desc"> Boneless Mutton Cooked Yougurt & Traditional Spices 1/2Kg RM 45.00 /
+                                1Kg
+                                RM 88.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/mutton-rajistani-handi.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 90.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Mutton Rajistani Handi </div>
+                            <div class="food-desc"> Boneless Mutton Cooked in Rajistani Style 1/2Kg RM 45.00 / 1Kg RM
+                                90.00
+                            </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/mutton-white-handi.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 88.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Mutton White Handi </div>
+                            <div class="food-desc"> Coimbination of Boneless Mutton Onion, Herbs & Cream 1/2Kg RM 44.00
+                                /
+                                1Kg RM 88.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/beef-makhani-handi.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 20.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Beef Makhani Handi </div>
+                            <div class="food-desc"> Boneless Beef Cooked in Pakistani Traditional Style with Butter
+                                1/2Kg RM
+                                37.00 / 1Kg RM 70.00</div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/chicken-handi.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 78.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Chicken Handi </div>
+                            <div class="food-desc"> Special Recipe of Chief 1/2Kg RM 40.00 / 1Kg RM 78.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/chicken-makhani-handi.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 68.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Chicken Makhani Handi </div>
+                            <div class="food-desc"> Boneless Chicken Cooked in Alomond & Mughlai Style 1/2Kg RM 35.00 /
+                                1Kg
+                                RM 35.00
+                                RM 88.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/chicken-boneLess-badami-handi.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 75.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Chicken BoneLess Badami Handi </div>
+                            <div class="food-desc"> Boneless Chicken Cooked in Pakistani Almond Yougurt & Traditional
+                                Herb
+                                1/2Kg RM 45.00 / 1Kg
+                                RM 88.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/chicken-white-handi.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 90.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Chicken White Handi </div>
+                            <div class="food-desc"> Combination of Boneless Chicken, Onion, Herbs & Cream 1/2Kg RM 35.00
+                                /
+                                1Kg RM 65.00
+                            </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/chicken-madrasi-handi.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 88.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Chicken Madrasi Handi </div>
+                            <div class="food-desc"> Chicken Cooked in Madrasi Style & Top Kismis 1/2Kg RM 38.00 /
+                                1Kg RM 75.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/chicken-kashmiri-handi.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 72.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Chicken Kashmiri Handi </div>
+                            <div class="food-desc"> Coimbination Of Chicken, White Cheese Souce Mixed Top, Dry Fruits &
+                                Cappcicam & Onion 1/2Kg RM 38.00 / 1Kg RM 72.00</div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/chicken-rajistani-handi.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 68.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Chicken Rajistani Handi </div>
+                            <div class="food-desc"> Boneless Chicken Cooked in Rajistani Style 1/2Kg RM 38.00 / 1Kg RM
+                                68.00
+                            </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/chicken-gingeer.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 36.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Chicken Gingeer </div>
+                            <div class="food-desc"> Julian Cut Chicken Cooked In Fine Spices & Herbs 1/2Kg RM 36.00
+                            </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/chicken-jalfrazi.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 38.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Chicken Jalfrazi </div>
+                            <div class="food-desc"> Chicken Cooked in Yourt, Red Source Garnished Tomato, Onion & Top
+                                Eggs
+                                1/2Kg RM 38.00</div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-list">
+
+                <div class="menu-title">
+                    <img src="assets/img/menu/menu-title-img.png" alt="menu-img">
+                    <h1> Pakistani Dastarkhwan </h1>
+                </div>
+
+                <div class="menu-item">
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/mutton-karahi.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 75.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Mutton Karahi </div>
+                            <div class="food-desc"> Freash Small Piece Of Lamb Cooked In Fine Spices With Special Lahori
+                                Taste 1/2Kg RM 38.00 / 1Kg RM 75.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/mutton-badami-handi.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 80.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Mutton Badami Handi </div>
+                            <div class="food-desc"> Mutton Cooked in Traditional Peshawari Style 1/2Kg RM 40.00 / 1Kg
+                                RM 80.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/mutton-achari-karahi.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 83.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Mutton Achari Karahi </div>
+                            <div class="food-desc"> Mutton Cooked in Home Made Pickle 1/2Kg RM 42.00 / 1Kg
+                                RM 83.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/mutton-rajistani-karahi.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 80.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Mutton Rajistani Karahi </div>
+                            <div class="food-desc"> Fresh Mutton Pieces, Cream, Almonds & Herbs Cooked in Rajistani
+                                Style
+                                1/2Kg RM 40.00 / 1Kg RM 80.00
+                            </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/beef-karahi.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 65.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Beef Karahi </div>
+                            <div class="food-desc"> Special Recipe of Chief 1/2Kg RM 33.00 /
+                                1Kg RM 65.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/beef-white-masala-karahi.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 65.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Beef White Masala Karahi </div>
+                            <div class="food-desc"> Beef Cooked in Youurt White Peper & Cream 1/2Kg RM
+                                35.00 / 1Kg RM 65.00</div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/beef-khara-masala-karahi.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 68.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Beef Khara Masala Karahi </div>
+                            <div class="food-desc"> Beef Cooked in Traditional Spices & Crispy Vegi 1/2Kg RM 35.00 / 1Kg
+                                RM
+                                68.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/kabab-masala-karahi.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 55.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Kabab Masala Karahi (Chicken & Beef) </div>
+                            <div class="food-desc"> BBQ Kebabs Cooked in Pakistani Karahi Style 1/2Kg RM 28.00 / 1Kg
+                                RM 55.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/beef-nihari.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 60.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Beef Nihari </div>
+                            <div class="food-desc"> Special Pieces of Beef Cooked in Karachi Style
+                                1/2Kg RM 30.00 / 1Kg
+                                RM 60.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/chicken-karahi.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 55.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Chicken Karahi </div>
+                            <div class="food-desc"> Fresh Small Pieces of Chicken Cooked in Fine Spices With Special
+                                Lahori
+                                Taste 1/2Kg RM 28.00 / 1Kg RM 55.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/chicken-green-masala-karahi.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 60.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Chicken Green Masala Karahi </div>
+                            <div class="food-desc"> Coimbinationof Chicken Mints + Coriander & Green Chills 1/2Kg RM
+                                32.00 /
+                                1Kg
+                                RM 60.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/chicken-charsi-karahi.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 70.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Chicken Charsi Karahi </div>
+                            <div class="food-desc"> 1/2Kg RM 36.00 / 1Kg
+                                RM 70.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/chicken-tikka-karahi.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 65.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Chicken Tikka Karahi </div>
+                            <div class="food-desc"> BBQ Chicken Tikka Cooked in Karahi Style
+                                1/2Kg RM 33.00 / 1Kg RM 65.00
+                            </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/chicken-rajistani-karahi.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 65.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Chicken Rajistani Karahi </div>
+                            <div class="food-desc"> Fresh Chicken Pieces, Cream, Almost & Herbs Cooked in Rajistani
+                                Style
+                                1/2Kg RM 33.00 /
+                                1Kg RM 65.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/chicken-achari-karahi.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 65.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Chicken Achari Karahi </div>
+                            <div class="food-desc"> Chicken Cooked in Home Made Pickle 1/2Kg RM
+                                33.00 / 1Kg RM 65.00</div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="menu-list">
+                <div class="menu-title">
+                    <img src="assets/img/menu/menu-title-img.png" alt="menu-img">
+                    <h1> B.B.Q Section </h1>
+                </div>
+
+                <div class="menu-item">
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/rice-BBQ-plater.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 390.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Pak Punjab SPL Rice BBQ Plater </div>
+                            <div class="food-desc"> Half 6PAX RM 199 / Full 12PAX RM 390 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/bbq-plater.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 99.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Special Mix BBQ Plater </div>
+                            <div class="food-desc"> Half @pax RM 52.00 / Full 4Pax RM 99.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/kalvi-tikka.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 22.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Kalvi Tikka </div>
+                            <div class="food-desc"> Special Recipe of Chief </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/chicken-tikka.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 13.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> special Chicken Tikka </div>
+                            <div class="food-desc"> LEG RM 12.00 / BREAST RM 13.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/chicken-malai-boti.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 32.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Chicken Malai Boti </div>
+                            <div class="food-desc"> With Bone RM 28.00 / Boneless RM 32.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/chicken-achari-tikka-boti.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 32.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Chicken Achari Tikka Boti </div>
+                            <div class="food-desc"> 10pc / RM 32.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/turkish-boti.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 16.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Turkish Boti </div>
+                            <div class="food-desc"> Special Recipe of Chief </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/shisthouk-boti.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 13.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Shisthouk Boti </div>
+                            <div class="food-desc"> Special Recipe of Chief </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/beef-cheese-kebab.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 30.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Beef Cheese Kebab </div>
+                            <div class="food-desc"> 2PC RM 15 / 4PC RM 30 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/mutton-kebab.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 37.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Special Mutton Kebab </div>
+                            <div class="food-desc"> 3PC RM 22 / 5PC RM 37 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/chicen-kebab.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 99.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Special Chicen Kebab </div>
+                            <div class="food-desc"> 3PC RM 15 / 5PC RM 25 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/beef-kebab.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 28.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> Special Beef Kebab </div>
+                            <div class="food-desc"> 3PC RM / 5PC RM 28 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/grill-champ.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 40.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> SPECIAL GRILL CHAMP </div>
+                            <div class="food-desc"> 5PC / RM 40.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/beef-bihari-boti.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 60.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> SPL BEEF BIHARI BOTI </div>
+                            <div class="food-desc"> HALF RM 30 / FULL RM 60.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/chicken-cheese-kebab.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 30.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> CHICKEN CHEESE KEBAB </div>
+                            <div class="food-desc"> 4PC RM 30.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/chicken-tikks-boti.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 27.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> CHICKEN TIKKS BOTI </div>
+                            <div class="food-desc"> 1PLATE RM 27.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/chicken-hari-bhari-boti.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 32.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> CHICKEN HARI BHARI BOTI </div>
+                            <div class="food-desc"> 1PLATE RM 32.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/bbq-grill-fish.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 20.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> B.B.Q GRILL FISH </div>
+                            <div class="food-desc"> FULL RM 20.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/mutton-cheese-kebab.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 37.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> MUTTON CHEESE KEBAB </div>
+                            <div class="food-desc"> 2PC RM 20.00 / 4PC RM 37.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/mutton-badami-kebab.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 37.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> MUTTON BADAMI KEBAB </div>
+                            <div class="food-desc"> 4PC / RM 37 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/rashmi-kebab.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 32.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> RASHMI KEBAB </div>
+                            <div class="food-desc"> 4PC / RM 35.00 </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-list">
+                <div class="menu-title">
+                    <img src="assets/img/menu/menu-title-img.png" alt="menu-img">
+                    <h1> RICE </h1>
+                </div>
+
+                <div class="menu-item">
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/chicken-briyani-plater.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 30.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> CHICKEN BRIYANI PLATER </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/mutton-briyani.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 44.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> MUTTON BRIYANI </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/chicken-pulao-plater.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 35.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> CHICKEN PULAO PLATER </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/mutton-pulao.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 45.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> MUTTON PULAO </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/mix-vege-briyani.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 25.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> MIX VEGE BIRYANI </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-list">
+                <div class="menu-title">
+                    <img src="assets/img/menu/menu-title-img.png" alt="menu-img">
+                    <h1> TAKA TAK </h1>
+                </div>
+
+                <div class="menu-item">
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/mix-taka-tak.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 70.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> MIX TAKA TAK </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/beef-tawa-keema-plate.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 20.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> BEEF TAWA KEEMA PLATE </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/chicken-tawa-keema.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 18.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> CHICKEN TAWA KEEMA </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/mutton-tawa-keema.jpg" alt="Food Item 1">
+                            <div class="price-tag"> RM 25.00 </div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> MUTTON TAWA KEEMA </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <div class="food-image-container">
+                            <img src="assets/img/non-veg-img/maghaz-masala.jpg" alt="Food Item 1">
+                            <div class="price-tag">RM 35.00</div>
+                        </div>
+
+                        <div class="food-details">
+                            <div class="food-name"> MAGHAZ MASALA </div>
+                            <button class="add-cart-btn"> Add + </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Newsletter Section -->
+    <div class="container pt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 newsletter-section">
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center" style="border-radius: 10px;">
+                        <img src="assets/img/home-header-img/2.jpg" alt="Food Image" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-8">
+                        <p class="mb-1"
+                            style="color: gold; font-size: 20px;font-weight: 700;text-shadow: 0.5px 0.5px 1px #000;">
+                            Aslipakpunjab</p>
+                        <h3>GET OUR EVERY SINGLE MENU NOTIFICATIONS</h3>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="updateFrequency" id="regularUpdates"
+                                checked>
+                            <label class="form-check-label" for="regularUpdates">Regular Updates</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="updateFrequency" id="weeklyUpdates">
+                            <label class="form-check-label" for="weeklyUpdates">Weekly Updates</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="updateFrequency" id="monthlyUpdates">
+                            <label class="form-check-label" for="monthlyUpdates">Monthly Updates</label>
+                        </div>
+                        <div class="input-group mt-3">
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                            <button class="btn btn-warning" type="button"><i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Company Info -->
+                <div class="col-md-3">
+                    <h2> <span style="color: green;"> Asli </span> <span style="color: gold;"> Pak </span> <span
+                            style="color: red;"> Punjab </span> </h2>
+                    <p>
+                        Experience the true taste of Punjab with every bite at Asli Pak Punjab. From sizzling
+                        tandoori
+                        delights to rich, flavorful curries, our dishes are crafted using traditional recipes and
+                        handpicked spices. Come for the food, stay for the warmth.
+                    </p>
+
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+                <!-- Our Menus -->
+                <div class="col-md-3">
+                    <h5>OUR MENUS</h5>
+                    <ul>
+                        <li><a href="#">Chicken Burger</a></li>
+                        <li><a href="#">Brief Pizza</a></li>
+                        <li><a href="#">Fresh Vegetable</a></li>
+                        <li><a href="#">Sea Foods</a></li>
+                        <li><a href="#">Desserts</a></li>
+                        <li><a href="#">Cold Drinks</a></li>
+                        <li><a href="#">Discount</a></li>
+                    </ul>
+                </div>
+                <!-- Useful Links -->
+                <div class="col-md-3">
+                    <h5>USEFUL LINKS</h5>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Restaurant</a></li>
+                        <li><a href="#">Our Chefs</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Blogs</a></li>
+                        <li><a href="#">FAQS</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Us & Download App -->
+                <div class="col-md-3">
+                    <h5>CONTACT US</h5>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> 0192891193 </li>
+                        <li><i class="fas fa-phone"></i> 0192891193 </li>
+                        <li><i class="fas fa-envelope"></i> <a
+                                href="mailto:info@yourdomain.com">admin@aslipakpunjab.com</a>
+                        </li>
+                        <li><i class="bi bi-globe"></i> www.aslipakpunjab.com </li>
+                        <li><i class="fas fa-map-marker-alt"></i> 15, JALAN SIP 1, SURIA INDUSTRIAL PARK, 43900 SEPANG,
+                            SELANGOR </li>
+                    </ul>
+                    <h5 class="mt-4">DOWNLOAD APP</h5>
+                    <div class="app-download">
+                        <a href="#"><img src="assets/img/store/google-play-logo.png" alt="Google Play"></a><br>
+                        <a href="#"><img src="assets/img/store/app-store-logo.png" alt="App Store"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom py-3">
+        <p class="bottom-content">© 2025. ALL RIGHTS RESERVED</p>
+
+        <div>
+            <span>ACCEPT FOR</span>
+            <img src="assets/img/payment-method/pay1.png" alt="Paypal" class="mt-2 mt-md-0"
+                style="background-color: #fff;">
+            <img src="assets/img/payment-method/pay2.png" alt="Mastercard" class="mt-2 mt-md-0"
+                style="background-color: #fff;">
+            <img src="assets/img/payment-method/pay3.png" alt="Visa" class="mt-2 mt-md-0"
+                style="background-color: #fff;">
+            <img src="assets/img/payment-method/pay4.png" alt="Discover" class="mt-2 mt-md-0"
+                style="background-color: #fff;">
+            <img src="assets/img/payment-method/pay5.png" alt="Amex" class="mt-2 mt-md-0"
+                style="background-color: #fff;">
+        </div>
+
+        <!-- Back to Top Button -->
+        <button class="back-to-top" onclick="scrollToTop()">
+            ↑
+        </button>
+    </div>
+
+    <script src="assets/js/script.js"> </script>
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"> </script>
+</body>
+
+</html>

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Asli Pak Punjab </title>
+
+    <!--My css-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/img/company-logo.png" type="image/png">
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+
+</head>
+
+<body style="background-color: rgb(250, 246, 241);">
+
+    <!-- NavBar -->
+    <nav id="Navbar" class="navbar px-3 px-md-4 py-md-1">
+        <div class="website-name text-white">
+            <div class="logo-img">
+                <img src="assets/img/company-logo.png" alt="">
+            </div>
+
+            <h2 class="logo-style ps-3"> <span style="color: green;"> Asli </span> <span
+                    style="color: rgb(219, 187, 3);"> Pak </span> <span style="color: red;"> Punjab </span> </h2>
+        </div>
+
+        <div class="navbar-menu pe-5">
+            <ul class="navbar-menu-links text-white">
+                <a href="home.html">
+                    <li> Home </li>
+                </a>
+
+                <a href="#" class="dropdown-service">
+                    <li id="serviceToggle"> Our Menus </li>
+                </a>
+
+                <a href="about.html">
+                    <li> About US</li>
+                </a>
+
+                <a href="contact.html">
+                    <li> Contact Us </li>
+                </a>
+            </ul>
+
+            <div class="login-btn ms-4">
+                <a href="book-table.html"> <button> Make a Reservation </button> </a>
+            </div>
+        </div>
+
+        <div class="navbar-menu-toggle" onclick="shownavbar()">
+            <i class="bi bi-list"></i>
+        </div>
+    </nav>
+
+    <!--Side Navbar-->
+    <aside class="side-navbar">
+        <p class="cross-symbol" onclick="closenavbar()"> <i class="fa fa-times" aria-hidden="true"></i> </p>
+
+        <div class="side-navbar-logo">
+            <img src="assets/img/company-logo.png" alt="">
+        </div>
+
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"> <a href="home.html"> Home </a> </p>
+            <p class="side-navbar-link" onclick="toggleTopServiceDropdown()">
+                <a href="#" class="dropdown-service">
+                    <span id="serviceToggle"> Our Menus </span>
+                </a>
+            </p>
+            <p class="side-navbar-link"> <a href="about.html"> About </a> </p>
+            <p class="side-navbar-link"> <a href="contact.html"> Contact </a> </p>
+
+            <a href="book-table.html"> <button> Make a Reservation </button> </a>
+        </div>
+    </aside>
+
+    <!-- Navbar Header -->
+    <header class="slider-container">
+        <div class="slider">
+            <div class="slide slide-1">
+                <div class="slide-content">
+                    <h4>TASTY AND CRUNCHY</h4>
+                    <h1>RESTAURANT</h1>
+                    <p>Experience the perfect blend of flavor and texture with every bite at our gourmet kitchen.
+                    </p>
+                    <button class="btn-menu">VIEW OUR MENU</button>
+                </div>
+            </div>
+            <div class="slide slide-2">
+                <div class="slide-content">
+                    <h4>CRISPY AND SOFT</h4>
+                    <h1>DELICIOUS</h1>
+                    <p>From golden crusts to melt-in-your-mouth interiors — taste the difference in every dish.</p>
+                    <button class="btn-menu">VIEW OUR MENU</button>
+                </div>
+            </div>
+            <div class="slide slide-3">
+                <div class="slide-content">
+                    <h4>WINE AND DINE</h4>
+                    <h1>ENJOYABLE</h1>
+                    <p>Unwind with a fine selection of wines and dishes crafted for memorable evenings.</p>
+                    <button class="btn-menu">VIEW OUR MENU</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrow arrow-left"> <i class="bi bi-chevron-left"></i> </div>
+        <div class="arrow arrow-right"> <i class="bi bi-chevron-right"></i> </div>
+    </header>
+
+    <main class="home-main-content">
+        <!-- Service option-->
+        <div class="service-dropdown" id="serviceDropdown">
+            <div class="dropdown-title pb-2">
+                <h5> Select Your Menu </h5>
+            </div>
+
+            <a href="veg.html" class="service-item d-flex align-items-center">
+                <img src="assets/img/menu/veg-menu.jpg" alt="veg" class="flag-icon mx-2">
+                <span> Veg </span>
+            </a>
+
+            <a href="nonveg.html" class="service-item d-flex align-items-center">
+                <img src="assets/img/menu/non-veg-menu.jpg" alt="nonveg" class="flag-icon mx-2">
+                <span> Non-Veg </span>
+            </a>
+
+            <a href="juice.html" class="service-item d-flex align-items-center">
+                <img src="assets/img/menu/juice-menu.jpg" alt="juice" class="flag-icon mx-2">
+                <span> Juice </span>
+            </a>
+        </div>
+
+        <!--Sidebar service option-->
+        <div id="topServiceDropdown" class="top-service-dropdown">
+            <div class="dropdown-title pb-2">
+                <h5> Select Your Menu </h5>
+            </div>
+
+            <a href="veg.html" class="service-item d-flex align-items-center">
+                <img src="assets/img/menu/veg-menu.jpg" alt="veg" class="flag-icon mx-2">
+                <span> Veg </span>
+            </a>
+
+            <a href="nonveg.html" class="service-item d-flex align-items-center">
+                <img src="assets/img/menu/non-veg-menu.jpg" alt="nonveg" class="flag-icon mx-2">
+                <span> Non-Veg </span>
+            </a>
+
+            <a href="juice.html" class="service-item d-flex align-items-center">
+                <img src="assets/img/menu/juice-menu.jpg" alt="juice" class="flag-icon mx-2">
+                <span> Juice </span>
+            </a>
+        </div>
+
+        <!-- Story Section -->
+        <section class="story-section py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Text Content -->
+                    <div class="col-lg-6 col-md-12 story-content d-flex flex-column justify-content-center">
+                        <h2>Discover <span>Our Story</span></h2>
+                        <p>
+                            Nestled in the heart of the city, our journey began with a deep passion for authentic
+                            flavors
+                            and
+                            unforgettable dining experiences. What started as a humble family kitchen has blossomed into
+                            a vibrant, welcoming restaurant cherished by both locals and travelers from around the
+                            world.
+                            Every dish we serve carries the
+                            warmth of tradition, the excitement of innovation, and the love poured into every recipe.
+                        </p>
+                        <p>
+                            From hand-picked, farm-fresh ingredients to recipes passed down through generations, we
+                            believe
+                            food should nourish not only the body but also the soul. Our talented chefs craft each plate
+                            with
+                            utmost care, blending bold tastes, vibrant colors, and artistic presentation to bring you a
+                            truly memorable and
+                            heartfelt meal. Each bite tells a story — of heritage, of love, and of a deep-rooted
+                            commitment
+                            to quality.
+                        </p>
+
+                    </div>
+
+                    <!-- Images -->
+                    <div class="col-lg-6 col-md-12 story-images pt-5 pt-md-0">
+                        <img src="assets/img/story-img/1.webp" alt="Food Setup" class="img-top">
+                        <img src="assets/img/story-img/2.jpeg" alt="People Dining" class="img-bottom">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- How it work-->
+        <section class="how-work py-2">
+            <div class="container my-5">
+                <p class="section-title">The process of our service</p>
+                <h1 class="main-title">HOW IT WORKS</h1>
+                <div class="row">
+                    <!-- Step 1 -->
+                    <div class="col-md-4 step-card">
+                        <img src="assets/img/how-it-work/1.webp" alt="Choose Restaurant Icon" class="step-icon" />
+                        <h2 class="step-title">Choose Restaurant</h2>
+                        <p class="step-description">
+                            Discover your favorite local spots or explore something new. We've partnered with the
+                            best
+                            restaurants in town for you!
+                        </p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-md-4 step-card">
+                        <img src="assets/img/how-it-work/2.jpg" alt="Pickup or Delivery Icon" class="step-icon" />
+                        <h2 class="step-title">Pickup or Delivery</h2>
+                        <p class="step-description">
+                            Select whether you want your meal delivered hot to your door or prefer a quick pickup on
+                            the
+                            go.
+                        </p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="col-md-4 step-card">
+                        <img src="assets/img/how-it-work/3.jpeg" alt="Select Your Love to Eat Icon" class="step-icon" />
+                        <h2 class="step-title">Select What You Love</h2>
+                        <p class="step-description">
+                            Browse menus, customize your dish, and enjoy every bite. From starters to desserts,
+                            we've
+                            got
+                            your
+                            cravings covered.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <div class="container py-5">
+            <p class="section-title"> Special Selection </p>
+            <h1 class="main-title"> From Our Menu </h1>
+            <div class="row">
+                <!-- Food Item 1 -->
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="home-menu-food-item pe-md-5 pe-3">
+                        <img src="assets/img/non-veg-img/fried-chicken.jpg" alt="Special Fried Chicken">
+
+                        <div>
+                            <h5>Special Fried Chicken</h5>
+                            <p style="max-width: 400px;">Crispy golden-fried chicken seasoned with secret herbs and
+                                spices.</p>
+                        </div>
+
+                        <div class="home-menu-price">RM 25</div>
+                    </div>
+                </div>
+
+                <!-- Food Item 2 -->
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="home-menu-food-item pe-md-5 pe-3">
+                        <img src="assets/img/non-veg-img/mutton-handi.jpg" alt="Special Mutton Handi">
+                        <div>
+                            <h5>Special Mutton Handi</h5>
+                            <p style="max-width: 400px;">Slow-cooked tender mutton in a rich and creamy curry sauce.</p>
+                        </div>
+                        <div class="home-menu-price">RM 90</div>
+                    </div>
+                </div>
+
+                <!-- Food Item 3 -->
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="home-menu-food-item pe-md-5 pe-3">
+                        <img src="assets/img/non-veg-img/chicken-handi.jpg" alt="Special Chicken Handi">
+                        <div>
+                            <h5>Special Chicken Handi</h5>
+                            <p style="max-width: 400px;">Juicy chicken pieces simmered in flavorful spices and cream.
+                            </p>
+                        </div>
+                        <div class="home-menu-price">RM 78</div>
+                    </div>
+                </div>
+
+                <!-- Food Item 4 -->
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="home-menu-food-item pe-md-5 pe-3">
+                        <img src="assets/img/non-veg-img/mutton-karahi.jpg" alt="Special Mutton Karahi">
+                        <div>
+                            <h5>Special Mutton Karahi</h5>
+                            <p style="max-width: 400px;">Spicy mutton cooked with tomatoes, garlic, and green chilies.
+                            </p>
+                        </div>
+                        <div class="home-menu-price">RM 75</div>
+                    </div>
+                </div>
+
+                <!-- Food Item 5 -->
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="home-menu-food-item pe-md-5 pe-3">
+                        <img src="assets/img/non-veg-img/chicken-karahi.jpg" alt="Special Chicken Karahi">
+                        <div>
+                            <h5>Special Chicken Karahi</h5>
+                            <p style="max-width: 400px;">Classic karahi dish with tender chicken and bold spice flavors.
+                            </p>
+                        </div>
+                        <div class="home-menu-price">RM 55</div>
+                    </div>
+                </div>
+
+                <!-- Food Item 6 -->
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="home-menu-food-item pe-md-5 pe-3">
+                        <img src="assets/img/non-veg-img/rice-BBQ-plater.jpg" alt="Special Rice BBQ Platter">
+                        <div>
+                            <h5>Special Rice BBQ Platter</h5>
+                            <p style="max-width: 400px;">Hearty platter of BBQ meats served with aromatic basmati rice.
+                            </p>
+                        </div>
+                        <div class="home-menu-price">RM 390</div>
+                    </div>
+                </div>
+
+                <!-- Food Item 7 -->
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="home-menu-food-item pe-md-5 pe-3">
+                        <img src="assets/img/non-veg-img/mutton-kebab.jpg" alt="Special Mutton Kebab">
+                        <div>
+                            <h5>Special Mutton Kebab</h5>
+                            <p style="max-width: 400px;">Grilled mutton kebabs marinated in traditional spices and
+                                herbs.</p>
+                        </div>
+                        <div class="home-menu-price">RM 37</div>
+                    </div>
+                </div>
+
+                <!-- Food Item 8 -->
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="home-menu-food-item pe-md-5 pe-3">
+                        <img src="assets/img/non-veg-img/chicen-kebab.jpg" alt="Special Chicken Kebab">
+                        <div>
+                            <h5>Special Chicken Kebab</h5>
+                            <p style="max-width: 400px;">Juicy chicken skewers grilled to perfection with aromatic
+                                seasoning.</p>
+                        </div>
+                        <div class="home-menu-price">RM 25</div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="nonveg.html" class="home-menu-view-all-btn mt-4">View All</a>
+        </div>
+
+        <!-- List Of Foods -->
+        <section class="list-of-food py-5">
+            <div class="header">
+                <p class="section-title">List Of Foods</p>
+                <h1>OUR FOOD GALLERY</h1>
+            </div>
+            <div class="filter-buttons">
+                <button class="active" data-filter="all">ALL</button>
+                <button data-filter="breakfast">Breakfast</button>
+                <button data-filter="coffee">Coffee</button>
+                <button data-filter="dinner">Dinner</button>
+                <button data-filter="lunch">Lunch</button>
+            </div>
+            <div class="gallery container">
+                <div class="row g-3">
+                    <!-- Placeholder images; replace URLs with actual image paths -->
+                    <div class="col-12 col-md-6 col-lg-4 gallery-item" data-category="dinner">
+                        <img src="assets/img/food-list/dinner-1.jpeg" alt="Dinner 1">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 gallery-item" data-category="lunch">
+                        <img src="assets/img/food-list/lunch-1.jpg" alt="Lunch 1">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 gallery-item" data-category="breakfast">
+                        <img src="assets/img/food-list/breakfast-1.jpg" alt="Breakfast 1">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 gallery-item" data-category="dinner">
+                        <img src="assets/img/food-list/dinner-2.jpeg" alt="Dinner 2">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 gallery-item" data-category="coffee">
+                        <img src="assets/img/food-list/coffee-1.jpg" alt="Coffee 1">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 gallery-item" data-category="lunch">
+                        <img src="assets/img/food-list/lunch-2.jpeg" alt="Lunch 2">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 gallery-item" data-category="breakfast">
+                        <img src="assets/img/food-list/breakfast-2.jpg" alt="Breakfast 1">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 gallery-item" data-category="coffee">
+                        <img src="assets/img/food-list/coffee-2.jpeg" alt="Coffee 1">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 gallery-item" data-category="lunch">
+                        <img src="assets/img/food-list/lunch-3.jpeg" alt="Lunch 2">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reservation book-->
+        <section class="reservation-section d-flex align-items-center justify-content-center text-center">
+            <div class="container">
+                <p class="section-title"> Reservations </p>
+                <h1 class="main-title"> BOOK A TABLE </h1>
+
+                <form class="row justify-content-center g-3">
+                    <div class="col-md-3">
+                        <select class="form-select custom-input">
+                            <option> 1 Person </option>
+                            <option> 2 People </option>
+                            <option> 3 People </option>
+                            <option> 4 People </option>
+                            <option> 5 People </option>
+                            <option> 6 People </option>
+                            <option> 8 People </option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="date" class="form-control custom-input" value="2025-05-26" />
+                    </div>
+                    <div class="col-md-3">
+                        <input type="time" class="form-control custom-input" value="11:00" />
+                    </div>
+                    <div class="col-md-2">
+                        <button type="submit" class="book-btn w-100">BOOK NOW</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Newsletter Section -->
+    <div class="container pt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 newsletter-section">
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center" style="border-radius: 10px;">
+                        <img src="assets/img/home-header-img/2.jpg" alt="Food Image" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-8">
+                        <p class="mb-1"
+                            style="color: gold; font-size: 20px;font-weight: 700;text-shadow: 0.5px 0.5px 1px #000;">
+                            Aslipakpunjab</p>
+                        <h3>GET OUR EVERY SINGLE MENU NOTIFICATIONS</h3>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="updateFrequency" id="regularUpdates"
+                                checked>
+                            <label class="form-check-label" for="regularUpdates">Regular Updates</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="updateFrequency" id="weeklyUpdates">
+                            <label class="form-check-label" for="weeklyUpdates">Weekly Updates</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="updateFrequency" id="monthlyUpdates">
+                            <label class="form-check-label" for="monthlyUpdates">Monthly Updates</label>
+                        </div>
+                        <div class="input-group mt-3">
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                            <button class="btn btn-warning" type="button"><i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Company Info -->
+                <div class="col-md-3">
+                    <h2> <span style="color: green;"> Asli </span> <span style="color: gold;"> Pak </span> <span
+                            style="color: red;"> Punjab </span> </h2>
+                    <p>
+                        Experience the true taste of Punjab with every bite at Asli Pak Punjab. From sizzling
+                        tandoori
+                        delights to rich, flavorful curries, our dishes are crafted using traditional recipes and
+                        handpicked spices. Come for the food, stay for the warmth.
+                    </p>
+
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+                <!-- Our Menus -->
+                <div class="col-md-3">
+                    <h5>OUR MENUS</h5>
+                    <ul>
+                        <li><a href="#">Chicken Burger</a></li>
+                        <li><a href="#">Brief Pizza</a></li>
+                        <li><a href="#">Fresh Vegetable</a></li>
+                        <li><a href="#">Sea Foods</a></li>
+                        <li><a href="#">Desserts</a></li>
+                        <li><a href="#">Cold Drinks</a></li>
+                        <li><a href="#">Discount</a></li>
+                    </ul>
+                </div>
+                <!-- Useful Links -->
+                <div class="col-md-3">
+                    <h5>USEFUL LINKS</h5>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Restaurant</a></li>
+                        <li><a href="#">Our Chefs</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Blogs</a></li>
+                        <li><a href="#">FAQS</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Us & Download App -->
+                <div class="col-md-3">
+                    <h5>CONTACT US</h5>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> 0192891193 </li>
+                        <li><i class="fas fa-phone"></i> 0192891193 </li>
+                        <li><i class="fas fa-envelope"></i> <a
+                                href="mailto:info@yourdomain.com">admin@aslipakpunjab.com</a>
+                        </li>
+                        <li><i class="bi bi-globe"></i> www.aslipakpunjab.com </li>
+                        <li><i class="fas fa-map-marker-alt"></i> 15, JALAN SIP 1, SURIA INDUSTRIAL PARK, 43900 SEPANG,
+                            SELANGOR </li>
+                    </ul>
+                    <h5 class="mt-4">DOWNLOAD APP</h5>
+                    <div class="app-download">
+                        <a href="#"><img src="assets/img/store/google-play-logo.png" alt="Google Play"></a><br>
+                        <a href="#"><img src="assets/img/store/app-store-logo.png" alt="App Store"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom py-3">
+        <p class="bottom-content">© 2025. ALL RIGHTS RESERVED</p>
+
+        <div>
+            <span>ACCEPT FOR</span>
+            <img src="assets/img/payment-method/pay1.png" alt="Paypal" class="mt-2 mt-md-0"
+                style="background-color: #fff;">
+            <img src="assets/img/payment-method/pay2.png" alt="Mastercard" class="mt-2 mt-md-0"
+                style="background-color: #fff;">
+            <img src="assets/img/payment-method/pay3.png" alt="Visa" class="mt-2 mt-md-0"
+                style="background-color: #fff;">
+            <img src="assets/img/payment-method/pay4.png" alt="Discover" class="mt-2 mt-md-0"
+                style="background-color: #fff;">
+            <img src="assets/img/payment-method/pay5.png" alt="Amex" class="mt-2 mt-md-0"
+                style="background-color: #fff;">
+        </div>
+
+        <!-- Back to Top Button -->
+        <button class="back-to-top" onclick="scrollToTop()">
+            ↑
+        </button>
+    </div>
+
+    <script src="assets/js/script.js"> </script>
+    <script src="assets/js/animation.js"> </script>
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"> </script>
+</body>
+
+</html>

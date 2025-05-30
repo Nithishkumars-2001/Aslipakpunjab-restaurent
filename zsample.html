@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Slider Review Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .review-section {
+            padding: 60px 0;
+            overflow: hidden;
+        }
+
+        .slider-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slider {
+            display: flex;
+            animation: slide 20s linear infinite;
+            width: max-content;
+        }
+
+        .review-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 0 15px;
+            width: 300px;
+            flex-shrink: 0;
+            text-align: center;
+        }
+
+        .review-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .review-card h5 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .review-card p {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .stars {
+            color: #f8d64e;
+            font-size: 1rem;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .slider:hover {
+            animation-play-state: paused;
+        }
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 992px) {
+            .review-card {
+                width: 250px;
+                padding: 15px;
+            }
+
+            .review-card img {
+                width: 60px;
+                height: 60px;
+            }
+
+            .review-card h5 {
+                font-size: 1rem;
+            }
+
+            .review-card p {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .review-section {
+                padding: 40px 0;
+            }
+
+            .review-card {
+                width: 200px;
+                margin: 0 10px;
+            }
+
+            .review-card img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .review-card h5 {
+                font-size: 0.9rem;
+            }
+
+            .review-card p {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .review-card {
+                width: 160px;
+                padding: 10px;
+            }
+
+            .review-card img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .review-card h5 {
+                font-size: 0.8rem;
+            }
+
+            .review-card p {
+                font-size: 0.75rem;
+            }
+
+            .stars {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="review-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Customer Reviews</h2>
+            <div class="slider-container">
+                <div class="slider">
+                    <!-- Review Cards (Duplicated for Infinite Effect) -->
+                    <div class="review-card">
+                        <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Reviewer 1">
+                        <h5>Anna Smith</h5>
+                        <p>"Amazing product! It exceeded my expectations."</p>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                    <div class="review-card">
+                        <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Reviewer 2">
+                        <h5>John Doe</h5>
+                        <p>"Great service and fast delivery!"</p>
+                        <div class="stars">★★★★☆</div>
+                    </div>
+                    <div class="review-card">
+                        <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Reviewer 3">
+                        <h5>Emma Wilson</h5>
+                        <p>"Really happy with my purchase."</p>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                    <div class="review-card">
+                        <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Reviewer 4">
+                        <h5>Michael Brown</h5>
+                        <p>"Good quality, will buy again!"</p>
+                        <div class="stars">★★★★☆</div>
+                    </div>
+                    <!-- Duplicate Cards for Seamless Loop -->
+                    <div class="review-card">
+                        <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Reviewer 1">
+                        <h5>Anna Smith</h5>
+                        <p>"Amazing product! It exceeded my expectations."</p>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                    <div class="review-card">
+                        <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Reviewer 2">
+                        <h5>John Doe</h5>
+                        <p>"Great service and fast delivery!"</p>
+                        <div class="stars">★★★★☆</div>
+                    </div>
+                    <div class="review-card">
+                        <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Reviewer 3">
+                        <h5>Emma Wilson</h5>
+                        <p>"Really happy with my purchase."</p>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                    <div class="review-card">
+                        <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Reviewer 4">
+                        <h5>Michael Brown</h5>
+                        <p>"Good quality, will buy again!"</p>
+                        <div class="stars">★★★★☆</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
